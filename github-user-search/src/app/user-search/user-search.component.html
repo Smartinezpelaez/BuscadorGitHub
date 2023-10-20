@@ -1,0 +1,11 @@
+<div class="search-container">
+  <input [(ngModel)]="username" placeholder="Nombre de usuario">
+  <button (click)="searchUser()">Buscar</button>
+</div>
+<div *ngIf="errorMessage; else userDataCard" class="error-message">
+  {{ errorMessage }}
+</div>
+<ng-template #userDataCard>
+  <app-user-card *ngIf="userData" [userData]="userData"></app-user-card>
+</ng-template>
+

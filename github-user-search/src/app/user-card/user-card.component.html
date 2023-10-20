@@ -1,0 +1,14 @@
+<!-- src/app/user-card/user-card.component.html -->
+<div class="user-card">
+  <img [src]="userData.avatar_url" alt="Avatar">
+  <div class="user-details">
+    <h2>{{ userData.name }}</h2>
+    <p>{{ userData.login }}</p>
+    <p>Location: {{ userData.location }}</p>
+    <p>Twitter: {{ userData.twitter_username }}</p>
+    <p>Blog: <a [href]="userData.blog" target="_blank">{{ userData.blog }}</a></p>
+    <p>Repos: {{ userData.public_repos }}</p>
+    <p>Followers: {{ userData.followers }}</p>
+    <p>Following: {{ userData.following }}</p>
+  </div>
+</div>
